@@ -4,8 +4,8 @@ const produtos = [
   { id: 2, nome: "Pastel de queijo", preco: 5.00, categoria: "pastel" },
   { id: 3, nome: "Pastel de frango", preco: 5.00, categoria: "pastel" },
   { id: 4, nome: "Pastelão", preco: 10.00, categoria: "pastel" },
-  { id: 5, nome: "Refrigerante Lata", preco: 6.00, categoria: "bebida" },
-  { id: 6, nome: "Suco Natural", preco: 7.50, categoria: "bebida" },
+  { id: 5, nome: "Refrigerante Lata", preco: 5.00, categoria: "bebida" },
+  { id: 6, nome: "Suco Natural", preco: 7.00, categoria: "bebida" },
   { id: 7, nome: "Açai", preco: 10.00, categoria: "sobremesa" }
 ];
 
