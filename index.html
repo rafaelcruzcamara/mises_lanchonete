@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lanchonete Mises - Sistema de Pedidos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <img src="text29.png" alt="Logo Mises">
+  </header>
+
+  <main>
+    <section>
+      <h2>Produtos</h2>
+      <div class="produtos-lista" id="produtos"></div>
+    </section>
+
+    <section>
+      <h2>Pedido Atual</h2>
+      <div class="pedido-lista" id="pedido"></div>
+      <div class="pedido-total" id="pedidoTotal">Total: R$ 0,00</div>
+      <div class="acoes">
+        <button onclick="imprimirNotaCompleta()" class="primary">Fechar Nota / Imprimir</button>
+        <button onclick="limparPedido()">Limpar Pedido</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Relatório do Dia</h2>
+      <div class="relatorio-lista" id="relatorio"></div>
+      <div class="pedido-total" id="relatorioTotal">Total do Dia: R$ 0,00</div>
+      <div class="acoes">
+        <button onclick="imprimirRelatorio()">Imprimir Relatório</button>
+        <button onclick="limparRelatorio()">Limpar Relatório</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Nota Fiscal (estrutura básica) -->
+  <div id="modalNota" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#0008; z-index:1000; align-items:center; justify-content:center;">
+    <div id="notaConteudo" style="background:#fff; padding:2rem; border-radius:8px; max-width:350px; width:90vw; box-shadow:0 2px 10px #0007;"></div>
+  </div>
+
+  <script src="script.js"></script>
+  
+  <!-- Inicialização -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      atualizarProdutos();
+      atualizarPedido();
+      atualizarRelatorio();
+    });
+  </script>
+</body>
+</html>
